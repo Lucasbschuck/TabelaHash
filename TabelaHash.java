@@ -107,8 +107,8 @@ public class TabelaHash {
         double duracaoBusca = (endTime - startTime)/ 1000000;
         System.out.println("\n\nTempo de execucao de 5 buscas: " + duracaoBusca + " milissegundos");
         System.out.println("\n\nTempo de execucao de insercao: " + duracaoInsert + " milissegundos");
-        System.out.print(colisao);
-        System.out.print(comparacao);
+        System.out.print("\n\n Numero de Colisões: "+ colisao);
+        System.out.print("\n\n Numero de Comparações: "+comparacao);
     }
     
 }

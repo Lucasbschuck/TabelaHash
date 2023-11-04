@@ -31,7 +31,7 @@ public class TabelaHash {
         public void busca_hashing(int codigo){
             int indice = codigo % tamanho;
             Registro atual = vetor[indice];
-            while (atual.getCodigo_registro() != codigo && atual.getProximo() != null){
+            while (atual.getCodigo_registro() != codigo && atual.getProximo() != null && atual.getProximo() != null){
                 atual = atual.getProximo();
                 comparacao++;
             }

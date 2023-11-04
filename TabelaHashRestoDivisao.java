@@ -1,7 +1,6 @@
-
-package tabelahash;
+package tabelahashrestodivisao;
 import java.util.Random;
-public class TabelaHash {
+public class TabelaHashRestoDivisao {
     static int colisao=0;
     static int comparacao = 0;
     public static class Tabela{

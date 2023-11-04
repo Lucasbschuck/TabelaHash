@@ -30,6 +30,7 @@ public class TabelaHash {
         }
         public void busca_hashing(int codigo){
             int indice = codigo % tamanho;
+            if (vetor[indice] == null){System.out.println("Valor Encontrado"); return;}
             Registro atual = vetor[indice];
             while (atual.getCodigo_registro() != codigo && atual.getProximo() != null && atual.getProximo() != null){
                 atual = atual.getProximo();

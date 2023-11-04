@@ -1,5 +1,5 @@
 
-package tabelahashmultiplicacao;
+package tabelahashdobramento;
 import java.util.Random;
 public class TabelaHashMultiplicacao {
     static int colisao=0;
@@ -10,9 +10,12 @@ public class TabelaHashMultiplicacao {
      
         public void hashing(int codigo){
            Registro a = new Registro(codigo);
-           int constante = 17;
-           int indice = codigo * constante;
-           indice = tamanho * indice;
+           int indice;
+           int divisor = 100000000;
+           int parte1 = codigo / divisor;
+           codigo %= divisor;
+           int parte2 = codigo;
+           indice = (parte1 + parte2) % tamanho;
            if (vetor[indice] != null){
                rehashing(a, vetor[indice]);
                colisao++;
